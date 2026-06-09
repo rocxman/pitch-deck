@@ -15,7 +15,7 @@ export function DeckChrome({
 }: DeckChromeProps) {
   return (
     <header className="fixed left-0 right-0 top-0 z-40 bg-transparent">
-      <div className="mx-auto flex h-[86px] w-full max-w-[1920px] items-center justify-between px-8 lg:px-12">
+      <div className="mx-auto flex h-14 w-full max-w-[1920px] items-center justify-between px-4 sm:h-16 sm:px-5 md:h-[72px] md:px-8 lg:h-[86px] lg:px-12">
         {/* Left: Brand / Logo */}
         <div className="flex items-center">
           <a
@@ -37,7 +37,7 @@ export function DeckChrome({
           <button
             onClick={onMenuToggle}
             data-cursor-label={menuOpen ? "TUTUP" : "MENU"}
-            className="flex h-[46px] w-[140px] md:w-[160px] items-center justify-between rounded-lg border border-white/[0.08] bg-white/[0.08] px-6 text-white backdrop-blur-md transition-all duration-300 hover:bg-white/[0.15] focus:outline-none"
+            className="flex h-[46px] w-[120px] items-center justify-between rounded-lg border border-white/[0.08] bg-white/[0.08] px-4 text-white backdrop-blur-md transition-all duration-300 hover:bg-white/[0.15] focus:outline-none md:w-[160px] md:px-6"
             aria-label="Toggle navigation menu"
           >
             <span className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] select-none">
@@ -93,13 +93,13 @@ export function DeckChrome({
         </div>
 
         {/* Right: Contact CTA */}
-        <div>
+        <div className="hidden md:block">
           <a
             href="#cta"
             data-cursor-label="KONTAK"
             className="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-colors duration-300 hover:text-white/80"
           >
-            Contact
+            Kontak
           </a>
         </div>
       </div>

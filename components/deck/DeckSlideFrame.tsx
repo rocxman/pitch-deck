@@ -97,9 +97,9 @@ export function DeckSlideFrame({
           ? { duration: 0.05, ease: "easeOut" }
           : { duration: 0.65, ease: [0.16, 1, 0.3, 1] }
       }
-      className="absolute inset-0 flex items-center justify-center bg-black px-5 py-20 md:px-8"
+      className="absolute inset-0 flex items-center justify-center bg-black px-3 py-14 md:px-5 md:py-16 lg:px-8 lg:py-20"
     >
-      <div className="relative h-[min(calc(100vh-140px),780px)] w-full max-w-[1360px] overflow-hidden rounded-[18px] border border-white/[0.08] bg-[#0A0A0A] p-5 shadow-[0_32px_96px_rgba(0,0,0,0.85)] md:p-6 lg:p-7">
+      <div className="relative h-[min(calc(100dvh-96px),780px)] w-full max-w-[1360px] overflow-hidden rounded-[18px] border border-white/[0.08] bg-[#0A0A0A] p-4 shadow-[0_32px_96px_rgba(0,0,0,0.85)] md:h-[min(calc(100dvh-112px),780px)] md:p-5 lg:h-[min(calc(100dvh-140px),780px)] lg:p-7">
         <h2 id={`${slide.id}-title`} className="sr-only">{slide.title}</h2>
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
         <div className="relative z-10 h-full overflow-hidden">

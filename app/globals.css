@@ -77,65 +77,67 @@ body {
   }
 }
 
-/* Custom Cursor styling */
-.c-cursor-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 9999;
-}
+/* Custom Cursor styling - only on desktop with fine pointer */
+@media (hover: hover) and (pointer: fine) {
+  .c-cursor-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    pointer-events: none;
+    z-index: 9999;
+  }
 
-.c-cursor {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 12px;
-  height: 12px;
-  background-color: #a3e635; /* vibrant lime green */
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  mix-blend-mode: normal; /* solid color for crisp rendering */
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              border-radius 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              background-color 0.3s ease,
-              color 0.3s ease;
-}
+  .c-cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #a3e635; /* vibrant lime green */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: normal; /* solid color for crisp rendering */
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                border-radius 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.3s ease,
+                color 0.3s ease;
+  }
 
-.c-cursor.is-hovered {
-  width: 90px;
-  height: 28px;
-  border-radius: 14px;
-  background-color: #a3e635; /* vibrant lime green */
-  color: #151515; /* dark ink for high-contrast text */
-  mix-blend-mode: normal;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 20px rgba(163, 230, 53, 0.3); /* subtle lime glow shadow */
-}
+  .c-cursor.is-hovered {
+    width: 90px;
+    height: 28px;
+    border-radius: 14px;
+    background-color: #a3e635; /* vibrant lime green */
+    color: #151515; /* dark ink for high-contrast text */
+    mix-blend-mode: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(163, 230, 53, 0.3); /* subtle lime glow shadow */
+  }
 
-.c-cursor__inner {
-  display: none;
-  font-family: var(--font-space-mono), monospace;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
+  .c-cursor__inner {
+    display: none;
+    font-family: var(--font-space-mono), monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 
-.c-cursor.is-hovered .c-cursor__inner {
-  display: block;
-}
+  .c-cursor.is-hovered .c-cursor__inner {
+    display: block;
+  }
 
-/* Hide standard cursor on deck elements */
-.deck-interactive,
-.deck-interactive * {
-  cursor: none !important;
+  /* Hide standard cursor on deck elements */
+  .deck-interactive,
+  .deck-interactive * {
+    cursor: none !important;
+  }
 }
 
 /* Custom scrollbars inside panels */

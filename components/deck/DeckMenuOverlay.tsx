@@ -27,7 +27,7 @@ export function DeckMenuOverlay({ slides, activeIndex, onGoTo, onClose }: DeckMe
       onClick={onClose}
     >
       <motion.div
-        className="flex max-h-[88vh] w-full max-w-2xl flex-col rounded-[1.75rem] border border-white/[0.08] bg-[#0d0d0d] p-5 shadow-[0_32px_100px_rgba(0,0,0,0.85)]"
+        className="flex max-h-[88dvh] w-[calc(100vw-2rem)] max-w-2xl flex-col rounded-[1.75rem] border border-white/[0.08] bg-[#0d0d0d] p-5 shadow-[0_32px_100px_rgba(0,0,0,0.85)]"
         initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: -20, scale: 0.96 }}
         animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
         exit={reduceMotion ? { opacity: 0 } : { opacity: 0, y: -14, scale: 0.98 }}

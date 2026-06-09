@@ -226,9 +226,9 @@ export function AgencyDeckSlide({ slide }: { slide: AgencyDeckSlideData }) {
         {/* Bottom meta details */}
         <motion.div
           variants={itemVariants}
-          className="grid grid-cols-1 gap-6 border-t border-white/[0.08] pt-6 text-left md:grid-cols-3"
+          className="grid grid-cols-1 gap-6 border-t border-white/[0.08] pt-6 md:grid-cols-3"
         >
-          <div>
+          <div className="text-left">
             <p className="mb-1 font-mono text-[9px] uppercase tracking-widest text-neutral-500 select-none">
               [ CLIENT ]
             </p>
@@ -236,7 +236,7 @@ export function AgencyDeckSlide({ slide }: { slide: AgencyDeckSlideData }) {
               Yoora Sarah
             </p>
           </div>
-          <div>
+          <div className="text-center">
             <p className="mb-1 font-mono text-[9px] uppercase tracking-widest text-neutral-500 select-none">
               [ AGENCY ]
             </p>
@@ -244,7 +244,7 @@ export function AgencyDeckSlide({ slide }: { slide: AgencyDeckSlideData }) {
               Meanwhile Agency
             </p>
           </div>
-          <div>
+          <div className="text-right">
             <p className="mb-1 font-mono text-[9px] uppercase tracking-widest text-neutral-500 select-none">
               [ DATE ]
             </p>
@@ -368,7 +368,7 @@ export function AgencyDeckSlide({ slide }: { slide: AgencyDeckSlideData }) {
       )}
 
       {slide.layout === "timeline" && (
-        <div className="relative min-h-0 flex-1 py-4 overflow-y-auto md:overflow-visible" data-deck-scroll-dark>
+        <div className="relative min-h-0 flex-1 py-4 overflow-y-auto xl:overflow-visible" data-deck-scroll-dark>
           {/* Timeline connecting line */}
           <div className="absolute left-[20px] top-6 bottom-6 w-0.5 bg-white/10 md:left-4 md:right-4 md:top-[38px] md:bottom-auto md:h-0.5 md:w-auto" />
           
@@ -517,7 +517,7 @@ export function AgencyDeckSlide({ slide }: { slide: AgencyDeckSlideData }) {
               <span>{slide.footnote}</span>
             </div>
           )}
-          <SourceRefs refs={slide.sourceRefs} />
+          {/* <SourceRefs refs={slide.sourceRefs} /> */}
         </motion.div>
       )}
     </motion.div>

@@ -55,7 +55,7 @@ export function PitchDeck({ slides }: PitchDeckProps) {
 
   useEffect(() => {
     document.body.style.overflow = isGridView ? "auto" : "hidden";
-    document.body.style.height = isGridView ? "auto" : "100vh";
+    document.body.style.height = isGridView ? "auto" : "100dvh";
     return () => {
       document.body.style.overflow = "";
       document.body.style.height = "";
@@ -205,7 +205,7 @@ export function PitchDeck({ slides }: PitchDeckProps) {
       )}
 
       {isGridView ? (
-        <div className="h-full overflow-y-auto bg-black px-6 py-28 md:px-12">
+        <div className="h-full overflow-y-auto bg-black px-4 py-16 sm:px-6 md:px-12 md:py-20 lg:py-28">
           <div className="mx-auto w-full max-w-7xl">
             <div className="mb-8 flex items-center justify-between border-b border-white/10 pb-4">
               <h1 className="font-sans text-2xl font-bold tracking-tight text-white">Ringkasan Slide</h1>
@@ -227,7 +227,7 @@ export function PitchDeck({ slides }: PitchDeckProps) {
           </div>
         </div>
       ) : (
-        <div className="fixed inset-0 h-screen w-screen overflow-hidden bg-black">
+        <div className="fixed inset-0 h-dvh w-full overflow-hidden bg-black">
           <AnimatePresence custom={direction}>
             <DeckSlideFrame
               key={activeSlide.id}
@@ -243,7 +243,7 @@ export function PitchDeck({ slides }: PitchDeckProps) {
       )}
 
       {/* Right side dot navigation */}
-      <div className="fixed right-8 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-end gap-4 md:flex">
+      <div className="fixed right-8 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-end gap-4 lg:flex">
         <div className="flex flex-col items-end gap-3.5">
           {slides.map((slide, idx) => (
             <button

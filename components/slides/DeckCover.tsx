@@ -8,9 +8,9 @@ export function DeckCover() {
           [ PITCH DECK ]
         </p>
         <h1 className="max-w-4xl font-sans text-4xl font-medium leading-[1.06] tracking-tight text-white md:text-6xl lg:text-[4.7rem]">
-          Readiness report 2026 —<br />
-          <span className="text-white">Strategic ecommerce</span><br />
-          <span className="text-white/40">audit & roadmap.</span>
+          Laporan kesiapan 2026 —<br />
+          <span className="text-white">Audit strategis ecommerce</span><br />
+          <span className="text-white/40">& roadmap.</span>
         </h1>
       </div>
 
